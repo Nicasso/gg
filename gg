@@ -18,7 +18,7 @@ if git status 2>&1 | grep -q "not a git repository"; then
 fi
 
 if git status 2>&1 | grep -q "nothing to commit"; then
-  echo "no changes added to commit (use "git add" and/or "git commit -a")"
+  echo "no changes added to commit (use "git add")"
   exit 1
 fi
 
