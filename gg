@@ -1,0 +1,35 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Usage: gg <branch_name> <commit_message>"
+	echo ""
+    echo "Example: gg feature/changing_purchase_button_color \"Making the purchase button red.\""
+    exit 1
+fi
+
+if git status 2>&1 | grep -q "not a git repository"; then
+  echo "fatal: not a git repository (or any of the parent directories): .git"
+  exit 1
+fi
+
+if git status 2>&1 | grep -q "nothing to commit"; then
+  echo "no changes added to commit (use "git add" and/or "git commit -a")"
+  exit 1
+fi
+
+if git status 2>&1 | grep -q "no changes added to commit"; then
+  echo "no changes added to commit (use "git add")"
+  exit 1
+fi
+
+CURRENT_BRANCH="$(git symbolic-ref HEAD 2>&1 | cut -d/ -f3-)"
+
+if git checkout -b $1 2>&1 | grep -q "already exists"; then
+  echo "fatal: A branch named '$1' already exists."
+  exit 1
+fi
+
+git commit -m " $2 "
+URL="$(git push origin HEAD 2>&1 | grep http | cut -d' ' -f 4)"
+open $URL
+git checkout $CURRENT_BRANCH
