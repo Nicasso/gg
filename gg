@@ -7,6 +7,11 @@ if [ $# -ne 2 ]; then
     exit 1
 fi
 
+if git 2>&1 | grep -q "command not found"; then
+  echo "fatal: command not found: git"
+  exit 1
+fi
+
 if git status 2>&1 | grep -q "not a git repository"; then
   echo "fatal: not a git repository (or any of the parent directories): .git"
   exit 1
