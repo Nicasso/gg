@@ -53,10 +53,14 @@ brew update gg --upgrade
 
 To remove *GG*:
 
+##### [Back to Contents](#contents)
+
 ```bash
 brew uninstall gg
 brew untap nicaso/gg
 ```
+
+##### [Back to Contents](#contents)
 
 ## How it works
 
