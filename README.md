@@ -62,11 +62,11 @@ brew untap nicaso/gg
 
 *GG* handles multiple git commands for you for faster and easier single commit merge requests.
 
-* `checkout` First we create a new branch with the provided name;
-* `commit` The we create the commit with the provided commit message;
-* `push` The we push to the current branch;
-* `open pull request url` Then we look for the url that creates a pull request and open that in your browser;
-* `checkout to previous repo` Finally we checkout the repo you started from;
+1. `checkout` First we create a new branch with the provided name;
+2. `commit` Then we create the commit with the provided commit message;
+3. `push` After that we push to the current branch;
+4. `open pull request url` Then we look for the url that creates a pull request and open that in your browser;
+5. `checkout to previous repo` Finally we checkout the repo you started from;
 
 ##### [Back to Contents](#contents)
 
