@@ -1,6 +1,6 @@
 # GG [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE.md)
 
-*GG* speeds up the creation of those pesky single commit merge requests by combiding several steps into one.
+*GG* speeds up the creation of those pesky single commit merge requests by combining several steps into one.
 
 Written example:
 
