@@ -2,7 +2,7 @@
 
 *GG* speeds up the creation of those pesky single commit merge requests by combining several (Git) commands into one.
 
-It currently supports Github, Gitlab, and Bitbucket merge requests (or pull requests depending on the platform).
+It currently supports Github, Gitlab, Azure, and Bitbucket merge requests (or pull requests depending on the platform).
 
 Written example:
 
