@@ -1,6 +1,6 @@
 # GG [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE.md)
 
-*GG* speeds up the creation of those pesky single commit merge requests by combining several steps into one.
+*GG* speeds up the creation of those pesky single commit merge requests by combining several (Git) commands into one.
 
 Written example:
 
@@ -10,7 +10,7 @@ Written example:
 
 # Notice
 
-It currently only works for Gitlab merge requests, an update will follow soon for GitHub support.
+It currently only works for Github, Gitlab, and Bitbucket merge requests (or pull requests depending on the platform).
 
 ## Contents
 
@@ -19,9 +19,8 @@ It currently only works for Gitlab merge requests, an update will follow soon fo
 3. [Updating](#updating)
 4. [Uninstall](#uninstall)
 5. [How it works](#how-it-works)
-6. [Settings](#settings)
-7. [To-do](#to-do)
-8. [License](#license-gnu-general-public-license-v3)
+6. [To-do](#to-do)
+7. [License](#license-gnu-general-public-license-v3)
 
 ## Requirements
 
@@ -37,9 +36,6 @@ On macOS or Linux, you can install *GG* via [Homebrew](https://brew.sh/):
 brew tap nicasso/gg
 brew install gg
 ```
-
-Changes are only available in a new shell session. To make changes immediately
-available, run `source ~/.bashrc` (or your shell config file like `.zshrc`).
 
 ##### [Back to Contents](#contents)
 
@@ -64,29 +60,21 @@ brew untap nicaso/gg
 
 ## How it works
 
-*GG* handles multiple git commands for you for faster and easier single commit merge requests.
+*GG* combines multiple (Git) commands for you, for faster and easier single commit merge requests.
 
-1. `checkout` First we create a new branch with the provided name;
-2. `commit` Then we create the commit with the provided commit message;
-3. `push` After that we push to the current branch;
-4. `open pull request url` Then we look for the url that creates a pull request and open that in your browser;
-5. `checkout to previous repo` Finally we checkout the repo you started from;
-
-##### [Back to Contents](#contents)
-
-## Settings
-
-*GG* has no settings yet, but will probably have them in the future for more customization.
+1. `git checkout` First it creates a new branch with the provided name;
+2. `git commit` Then it creates the commit with the provided commit message;
+3. `git push` After that it pushes to the created branch;
+4. `open` Then it looks for the url used for creating a new merge request in the response of the git push command and opens that page in your browser;
+5. `git checkout` Finally it does a checkout back to the repository you started from;
 
 ##### [Back to Contents](#contents)
 
 ## To-do
 
-There are still some things I need/want to create for this alias.
+There are still some things that could be created in the future.
 
-- Github support with their pull-request URL;
-- Bitbucket support with their pull-request URL;
-- A couple of customizable features;
+- Supporting multiline commit messages.
 
 ##### [Back to Contents](#contents)
 
