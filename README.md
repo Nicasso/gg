@@ -2,15 +2,17 @@
 
 *GG* speeds up the creation of those pesky single commit merge requests by combining several (Git) commands into one.
 
+It currently supports Github, Gitlab, and Bitbucket merge requests (or pull requests depending on the platform).
+
 Written example:
 
 ```bash
 ➜ gg feature/typo-in-readme "Fix a typo in the README.md"
 ```
 
-# Notice
+Demo:
 
-It currently only works for Github, Gitlab, and Bitbucket merge requests (or pull requests depending on the platform).
+![Demo](assets/demo.gif)
 
 ## Contents
 
@@ -42,7 +44,7 @@ brew install gg
 ## Updating
 
 ```bash
-brew update && brew upgrade
+brew update && brew upgrade nicasso/gg/gg
 ```
 
 ## Uninstall
