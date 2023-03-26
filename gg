@@ -34,7 +34,13 @@ if git checkout -b $1 2>&1 | grep -q "already exists"; then
   exit 1
 fi
 
-git commit -m " $2 "
-URL="$(git push origin HEAD 2>&1 | grep http | cut -d' ' -f 4)"
+# Currently GG supports 3 platforms, Github, Gitlab, and Bitbucket.
+# They all use different paths for creating their merge requests.
+# For Github it should match "pull/new"
+# For Gitlab it should match "merge_requests/new"
+# For Bitbucket it should match "pull-requests/new"
+
+git commit -m "$2"
+URL="$(git push origin HEAD 2>&1 | grep -Eo 'http.*((pull/new)|(merge_requests/new)|(pull-requests/new)).*')"
 open $URL
 git checkout $CURRENT_BRANCH
