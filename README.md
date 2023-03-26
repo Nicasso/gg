@@ -42,7 +42,7 @@ brew install gg
 ## Updating
 
 ```bash
-brew update gg --upgrade
+brew update && brew upgrade
 ```
 
 ## Uninstall
