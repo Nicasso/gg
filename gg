@@ -2,7 +2,7 @@
 
 if [ $# -ne 1 ] && [ $# -ne 2 ]; then
     echo "Usage: gg <branch_name> <optional: commit_message>"
-	echo ""
+    echo ""
     echo "Example with commit message included: gg feature/changing_purchase_button_color \"Making the purchase button red.\""
     echo "Example with commit message via text editor: gg feature/changing_purchase_button_color"
     exit 1
