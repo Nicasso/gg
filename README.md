@@ -2,7 +2,7 @@
 
 *GG* speeds up the creation of those pesky single commit merge requests by combining several (Git) commands into one.
 
-It currently supports Github, Gitlab, Azure, and Bitbucket merge requests (or pull requests depending on the platform).
+It currently supports Github, Gitlab, and Bitbucket merge requests (or pull requests depending on the platform).
 
 Written example:
 
@@ -74,9 +74,7 @@ brew untap nicaso/gg
 
 ## To-do
 
-There are still some things that could be created in the future.
-
-- Supporting multiline commit messages.
+Nothing I can think of for now. If you have any suggestions, please open an issue.
 
 ##### [Back to Contents](#contents)
 
