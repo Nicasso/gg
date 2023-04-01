@@ -4,10 +4,16 @@
 
 It currently supports Github, Gitlab, and Bitbucket merge requests (or pull requests depending on the platform).
 
-Written example:
+Written example including the commit message:
 
 ```bash
 ➜ gg feature/typo-in-readme "Fix a typo in the README.md"
+```
+
+Written example where you can add the commit message in your favourite text editor:
+
+```bash
+➜ gg feature/typo-in-readme
 ```
 
 Demo:
