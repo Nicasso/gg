@@ -61,7 +61,7 @@ To remove *GG*:
 
 ```bash
 brew uninstall gg
-brew untap nicaso/gg
+brew untap nicasso/gg
 ```
 
 ##### [Back to Contents](#contents)
